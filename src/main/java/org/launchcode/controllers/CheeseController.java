@@ -1,5 +1,6 @@
 package org.launchcode.controllers;
 
+import org.hibernate.annotations.common.reflection.XMethod;
 import org.launchcode.models.Category;
 import org.launchcode.models.Cheese;
 import org.launchcode.models.data.CheeseDao;
@@ -47,7 +48,7 @@ public class CheeseController {
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
-    public String processAddCheeseForm(@ModelAttribute  @Valid Cheese newCheese,
+    public String processAddCheeseForm(@ModelAttribute @Valid Cheese newCheese,
                                        Errors errors,
                                        @RequestParam int categoryId,
                                        Model model) {
