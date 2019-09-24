@@ -2,9 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
     <head th:replace="fragments :: head"></head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+
 <body class="container">
     <nav th:replace="fragments :: navigation"></nav>
+    <h1 th:text="${title}">Default Title</h1>
     <div class="container body-content">
     <form th:object="${form}" method="post" action="/menu/add-item">
 
@@ -17,7 +18,9 @@
             </select>
             <input type="hidden" name="menuId" th:value="*{menu.id}" />
         </div>
-        <input type="submit" value="Add" />
+
+
+        <input type="submit" value="Add Cheese" />
     </form>
     </div>
 
