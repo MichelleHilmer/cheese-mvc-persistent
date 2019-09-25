@@ -4,8 +4,8 @@ public class AddMenuItemForm {
     private Menu menu;
     private Iterable<Cheese> cheeses;
 
-    private int MenuId;
-    private int CheeseId;
+    private int menuId;
+    private int cheeseId;
 
     public AddMenuItemForm(){
 
@@ -23,11 +23,11 @@ public class AddMenuItemForm {
     }
 
     public int getMenuId() {
-        return MenuId;
+        return menuId;
     }
 
     public int getCheeseId() {
-        return CheeseId;
+        return cheeseId;
     }
 
     public void setMenu(Menu menu) {
