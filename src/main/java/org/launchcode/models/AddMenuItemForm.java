@@ -1,19 +1,24 @@
 package org.launchcode.models;
 
+import javax.validation.constraints.NotNull;
+
 public class AddMenuItemForm {
     private Menu menu;
     private Iterable<Cheese> cheeses;
 
+    @NotNull
     private int menuId;
+    
+    @NotNull
     private int cheeseId;
-
-    public AddMenuItemForm(){
-
-    }
+    
 
     public AddMenuItemForm(Menu menu, Iterable<Cheese> cheeses) {
-        this.cheeses = cheeses;
         this.menu = menu;
+        this.cheeses = cheeses;
+    }
+    public AddMenuItemForm(){
+        
     }
 
     public Menu getMenu() {

@@ -20,6 +20,10 @@ public class Menu {
     @ManyToMany
     private List<Cheese> cheeses = new ArrayList<>();
 
+    public Menu(String name) {
+        this.name = name;
+    }
+
     public Menu() {
 
     }
@@ -46,11 +50,9 @@ public class Menu {
         this.id = id;
     }
 
-    public void addItem(Cheese item){
+    public void addItem(Cheese item) {
+        cheeses.add(item);
 
     }
 
-    public Menu(String name) {
-        this.name = name;
-    }
 }
