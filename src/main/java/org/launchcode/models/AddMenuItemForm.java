@@ -11,7 +11,9 @@ public class AddMenuItemForm {
 
     }
 
-    public AddMenuItemForm(Menu menu, Iterable<Cheese> all) {
+    public AddMenuItemForm(Menu menu, Iterable<Cheese> cheeses) {
+        this.cheeses = cheeses;
+        this.menu = menu;
     }
 
     public Menu getMenu() {
@@ -23,6 +25,7 @@ public class AddMenuItemForm {
     }
 
     public int getMenuId() {
+        
         return menuId;
     }
 
